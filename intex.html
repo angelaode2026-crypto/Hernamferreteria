@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería Hernam | Materiales de Construcción en Arequipa</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#C8102E', // Rojo corporativo
+                            black: '#1A1A1A', // Negro principal
+                            white: '#FFFFFF',
+                            gray: '#F5F5F5',
+                            darkGray: '#333333'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1A1A1A;
+            overflow-x: hidden; 
+        }
+        .hero-bg {
+            background-color: #1A1A1A;
+            background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.8)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-brand-white text-brand-black antialiased relative">
+
+    <!-- Header / Menú superior -->
+    <header class="bg-brand-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#inicio" class="flex-shrink-0 nav-link">
+                    <img src="https://placehold.co/400x120/C8102E/FFFFFF?text=FERRETERIA+HERNAM&font=Montserrat" alt="Logo Hernam" class="h-10 md:h-12 w-auto object-contain rounded" loading="lazy">
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center font-semibold text-sm">
+                    <a href="#inicio" class="nav-link text-brand-black hover:text-brand-red transition duration-300">Inicio</a>
+                    <a href="#nosotros" class="nav-link text-brand-black hover:text-brand-red transition duration-300">Nosotros</a>
+                    <a href="#productos" class="nav-link text-brand-black hover:text-brand-red transition duration-300">Productos</a>
+                    <a href="#contacto" class="nav-link text-brand-black hover:text-brand-red transition duration-300">Contacto</a>
+                    <a href="#cotizar" class="nav-link bg-brand-red text-brand-white px-6 py-2 rounded-md hover:bg-red-800 transition duration-300 shadow-lg font-bold">
+                        Cotizar ahora
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-black hover:text-brand-red focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-white border-t border-gray-200 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 font-semibold">
+                <a href="#inicio" class="nav-link block px-3 py-2 text-brand-black hover:text-brand-red hover:bg-gray-50 rounded-md">Inicio</a>
+                <a href="#nosotros" class="nav-link block px-3 py-2 text-brand-black hover:text-brand-red hover:bg-gray-50 rounded-md">Nosotros</a>
+                <a href="#productos" class="nav-link block px-3 py-2 text-brand-black hover:text-brand-red hover:bg-gray-50 rounded-md">Productos</a>
+                <a href="#contacto" class="nav-link block px-3 py-2 text-brand-black hover:text-brand-red hover:bg-gray-50 rounded-md">Contacto</a>
+                <a href="#cotizar" class="nav-link block mt-4 text-center bg-brand-red text-brand-white px-4 py-3 rounded-md hover:bg-red-800 font-bold">Cotizar ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg h-screen min-h-[600px] flex items-center pt-20">
+        <div class="container mx-auto px-4 lg:px-8 text-center md:text-left">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-brand-white leading-tight mb-4 tracking-tight">
+                    Ferretería <span class="text-brand-red">Hernam</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-200 mb-8 font-light">
+                    Materiales de construcción, madera y ferretería al por mayor en Arequipa.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#cotizar" class="nav-link bg-brand-red text-brand-white px-8 py-4 rounded-md text-lg font-bold hover:bg-red-800 transition duration-300 shadow-lg transform hover:-translate-y-1 text-center">
+                        Solicita tu cotización
+                    </a>
+                    <a href="#productos" class="nav-link bg-transparent border-2 border-brand-white text-brand-white px-8 py-4 rounded-md text-lg font-bold hover:bg-brand-white hover:text-brand-black transition duration-300 text-center">
+                        Ver productos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="py-20 bg-brand-white scroll-mt-20">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=800&auto=format&fit=crop" alt="Almacén Ferretería Hernam" class="rounded-lg shadow-xl w-full object-cover h-[400px]" loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-1 bg-brand-red"></div>
+                        <h2 class="text-3xl font-bold text-brand-black uppercase tracking-wider">Nosotros</h2>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-black mb-6">Líderes mayoristas en Arequipa</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        <strong>Hernam Perú S.A.C.</strong> es una empresa arequipeña dedicada al comercio al por mayor de materiales de construcción y artículos de ferretería. 
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Nos enfocamos en brindar productos de alta calidad, stock permanente y un servicio eficiente para abastecer proyectos de gran envergadura y negocios minoristas en toda la región sur.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-truck-loading text-brand-red text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-brand-black">Ventas al por mayor</h4>
+                                <p class="text-sm text-gray-500">Precios competitivos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-hard-hat text-brand-red text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-brand-black">Calidad Garantizada</h4>
+                                <p class="text-sm text-gray-500">Las mejores marcas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="py-20 bg-brand-gray scroll-mt-20">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-black mb-4">Nuestro Catálogo</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Amplio stock de productos para todo tipo de proyectos de construcción y carpintería.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-brand-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="relative overflow-hidden h-64 bg-gray-200">
+                        <img src="https://lh3.googleusercontent.com/d/1TVX-Ob4m-8E6OWXGgUGPF1cVtOVDPVqg" alt="Materiales de construcción" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1A1A1A/FFFFFF?text=Materiales+de+Construccion';">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-black mb-2">Materiales de construcción</h3>
+                        <p class="text-gray-600 text-sm mb-4">Cemento, fierro, ladrillos, agregados y todo para la obra gruesa.</p>
+                        <a href="#cotizar" class="nav-link text-brand-red font-bold hover:text-red-800 flex items-center gap-2">
+                            Cotizar categoría <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-brand-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="relative overflow-hidden h-64 bg-gray-200">
+                        <img src="https://lh3.googleusercontent.com/d/1UmqC-DNy-b-cseGj8BGY3cAHvq6mJlS_" alt="Madera" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1A1A1A/FFFFFF?text=Madera';">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-black mb-2">Madera</h3>
+                        <p class="text-gray-600 text-sm mb-4">Triplay, tableros, listones y madera de diversas especies al por mayor.</p>
+                        <a href="#cotizar" class="nav-link text-brand-red font-bold hover:text-red-800 flex items-center gap-2">
+                            Cotizar categoría <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-brand-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="relative overflow-hidden h-64 bg-gray-200">
+                        <img src="https://lh3.googleusercontent.com/d/1r7iLeR2-9WFHkw3udR5CcWyLMK3vutW_" alt="Herramientas y ferretería" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1A1A1A/FFFFFF?text=Herramientas+y+Ferreteria';">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-black mb-2">Herramientas y ferretería</h3>
+                        <p class="text-gray-600 text-sm mb-4">Herramientas manuales, eléctricas, clavos, tornillos y accesorios.</p>
+                        <a href="#cotizar" class="nav-link text-brand-red font-bold hover:text-red-800 flex items-center gap-2">
+                            Cotizar categoría <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto y Formulario -->
+    <section id="contacto" class="py-20 bg-brand-black text-brand-white scroll-mt-20">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+                
+                <!-- Info Contacto -->
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-3xl font-bold text-brand-white mb-6">Ponte en contacto</h2>
+                    <p class="text-gray-400 mb-10">Estamos listos para atender tus requerimientos mayoristas. Visítanos o escríbenos directamente.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-red w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-xl text-brand-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 uppercase tracking-wide">WhatsApp / Teléfono</h4>
+                                <a href="https://wa.me/51945290906" target="_blank" class="text-xl font-bold hover:text-brand-red transition">945 290 906</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-red w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-xl text-brand-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 uppercase tracking-wide">Correo Electrónico</h4>
+                                <a href="mailto:ventas@hernam.pe" class="text-lg font-bold hover:text-brand-red transition">ventas@hernam.pe</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-red w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl text-brand-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 uppercase tracking-wide">Dirección</h4>
+                                <a href="https://maps.app.goo.gl/yrfa8D74bCqKHdwY8" target="_blank" class="text-lg font-bold hover:text-brand-red transition underline decoration-brand-red/30 underline-offset-4">Ver ubicación en Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa Link -->
+                    <a href="https://maps.app.goo.gl/yrfa8D74bCqKHdwY8" target="_blank" class="block mt-10 rounded-lg overflow-hidden shadow-lg border border-gray-800 hover:opacity-90 transition-opacity relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop" alt="Mapa Hernam" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="bg-brand-red text-white font-bold py-3 px-6 rounded-md shadow-lg flex items-center gap-2">
+                                <i class="fas fa-map-marker-alt"></i> Ver ubicación en Maps
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Formulario -->
+                <div id="cotizar" class="order-1 lg:order-2 bg-brand-white text-brand-black p-8 rounded-lg shadow-2xl scroll-mt-24">
+                    <h3 class="text-2xl font-bold mb-2">Solicitar Cotización</h3>
+                    <p class="text-gray-600 mb-8 text-sm">Completa tus datos y nos comunicaremos contigo vía WhatsApp o correo a la brevedad.</p>
+                    
+                    <form id="cotizacion-form" class="space-y-5">
+                        <div>
+                            <label for="tipo_cliente" class="block text-sm font-semibold text-gray-700 mb-1">Tipo de cliente *</label>
+                            <select id="tipo_cliente" name="tipo_cliente" required 
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent transition bg-white cursor-pointer appearance-none">
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="Empresa">Empresa</option>
+                                <option value="Ferretería">Ferretería</option>
+                                <option value="Cliente">Cliente</option>
+                                <option value="Maestro">Maestro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="whatsapp" class="block text-sm font-semibold text-gray-700 mb-1">WhatsApp / Celular *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500"><i class="fab fa-whatsapp"></i></span>
+                                    <input type="tel" id="whatsapp" name="whatsapp" required 
+                                        class="w-full pl-10 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent transition"
+                                        placeholder="Número de contacto">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="correo" class="block text-sm font-semibold text-gray-700 mb-1">Correo Electrónico *</label>
+                                <input type="email" id="correo" name="correo" required 
+                                    class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent transition"
+                                    placeholder="correo@empresa.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="mensaje" class="block text-sm font-semibold text-gray-700 mb-1">Detalle de Cotización *</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required 
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent transition resize-none"
+                                placeholder="Indícanos los productos, cantidades y si requiere envío..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-red hover:bg-red-800 text-brand-white font-bold py-4 px-6 rounded-md transition duration-300 shadow-md flex justify-center items-center gap-2 text-lg">
+                            <i class="fas fa-paper-plane"></i> Enviar Cotización
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darkGray text-gray-300 py-10 border-t border-gray-700">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-4">
+                    <img src="https://placehold.co/200x60/333333/FFFFFF?text=HERNAM&font=Montserrat" alt="Logo Hernam Footer" class="h-8 w-auto rounded opacity-80 hover:opacity-100 transition" loading="lazy">
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-red text-white transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-red text-white transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-red text-white transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Hernam Perú S.A.C. Todos los derechos reservados.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0 items-center">
+                    <a href="https://maps.app.goo.gl/yrfa8D74bCqKHdwY8" target="_blank" class="hover:text-white transition">Arequipa, Perú</a>
+                    <span class="text-brand-red">|</span>
+                    <a href="tel:945290906" class="hover:text-white transition">945 290 906</a>
+                    <span class="text-brand-red">|</span>
+                    <a href="mailto:ventas@hernam.pe" class="hover:text-white transition">ventas@hernam.pe</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/51945290906" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 bg-brand-red text-brand-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-red-800 hover:scale-110 transition-all duration-300 z-50 group">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-brand-black text-brand-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Chatear ahora
+        </span>
+    </a>
+
+    <!-- Modal de Éxito -->
+    <div id="success-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden bg-black bg-opacity-50 backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-lg p-8 max-w-sm w-full mx-4 shadow-2xl text-center transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-green-500">
+                <i class="fas fa-check text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">¡Cotización Enviada!</h3>
+            <p class="text-gray-600 mb-6">Hemos recibido tus datos correctamente. Un asesor de Ferretería Hernam te contactará pronto.</p>
+            <button id="close-modal" class="w-full bg-brand-red hover:bg-red-800 text-white font-bold py-3 px-4 rounded transition duration-300">
+                Aceptar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scrolling para menús
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            document.getElementById('mobile-menu').classList.add('hidden');
+                            document.getElementById('mobile-menu-btn').querySelector('i').classList.replace('fa-times', 'fa-bars');
+                            
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            // Form submission logic (Google Sheets Integration)
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwpmM5Ydc77uRn6gUH6M8OP1J6-vcFwtKkPmXyV8zWHNbkzsmAwRv3JoqcnOk3PtoCd/exec';
+            const form = document.getElementById('cotizacion-form');
+            const modal = document.getElementById('success-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+
+            form.addEventListener('submit', e => {
+                e.preventDefault(); 
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+                
+                const formData = new FormData(form);
+                
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                        modal.classList.remove('hidden');
+                        setTimeout(() => {
+                            modal.querySelector('div').classList.remove('scale-95');
+                            modal.querySelector('div').classList.add('scale-100');
+                        }, 10);
+                        
+                        form.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        alert('Hubo un error de conexión al enviar. Por favor, intenta de nuevo o escríbenos directo al WhatsApp.');
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    });
+            });
+
+            const closeModal = () => {
+                modal.querySelector('div').classList.remove('scale-100');
+                modal.querySelector('div').classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            };
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+            
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-lg');
+                    header.classList.remove('shadow-md');
+                } else {
+                    header.classList.add('shadow-md');
+                    header.classList.remove('shadow-lg');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
